@@ -1,12 +1,15 @@
 ﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <iostream>
+#include <QFontDialog>
+#include <QFont>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QWidget::setWindowTitle("UNEDUCADED");
     QMainWindow::showMaximized();
 }
 
@@ -59,4 +62,9 @@ void MainWindow::on_lengthButton_clicked()
 void MainWindow::on_colorButton_clicked()
 {
 
+}
+
+void MainWindow::on_actionOptions_triggered()
+{
+    MainWindow::setFont(QFontDialog::getFont(0, MainWindow::font()));
 }

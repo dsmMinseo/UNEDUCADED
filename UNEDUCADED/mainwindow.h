@@ -35,6 +35,8 @@ private slots:
 
     void on_colorButton_clicked();
 
+    void on_actionOptions_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
