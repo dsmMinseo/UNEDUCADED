@@ -66,5 +66,5 @@ void MainWindow::on_colorButton_clicked()
 
 void MainWindow::on_actionOptions_triggered()
 {
-    MainWindow::setFont(QFontDialog::getFont(0, MainWindow::font()));
+    MainWindow::setFont(QFontDialog::getFont(nullptr, MainWindow::font()));
 }
