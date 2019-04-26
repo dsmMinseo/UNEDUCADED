@@ -209,7 +209,7 @@
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-	border-image: url(:/icons/C:/Users/dsm2017/Desktop/icons/undo.png) 0 0 0 0 stretch stretch;
+	border-image: url(:/icons/resources/icons/undo.png) 0 0 0 0 stretch stretch;
 }</string>
          </property>
          <property name="text">
@@ -227,7 +227,7 @@
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-	border-image: url(:/icons/C:/Users/dsm2017/Desktop/icons/redo.png) 0 0 0 0 stretch stretch;
+	border-image: url(:/icons/resources/icons/redo.png) 0 0 0 0 stretch stretch;
 }</string>
          </property>
          <property name="text">
@@ -268,7 +268,7 @@
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-	border-image: url(:/icons/C:/Users/dsm2017/Desktop/icons/move.png) 0 0 0 0 stretch stretch;
+	border-image: url(:/icons/resources/icons/move.png) 0 0 0 0 stretch stretch;
 }</string>
          </property>
          <property name="text">
@@ -286,7 +286,7 @@
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-	border-image: url(:/icons/C:/Users/dsm2017/Desktop/icons/rotate.png) 0 0 0 0 stretch stretch;
+	border-image: url(:/icons/resources/icons/rotate.png) 0 0 0 0 stretch stretch;
 }</string>
          </property>
          <property name="text">
@@ -304,7 +304,7 @@
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-	border-image: url(:/icons/C:/Users/dsm2017/Desktop/icons/resize.png) 0 0 0 0 stretch stretch;
+	border-image: url(:/icons/resources/icons/resize.png) 0 0 0 0 stretch stretch;
 }</string>
          </property>
          <property name="text">
@@ -345,7 +345,7 @@
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-	border-image: url(:/icons/C:/Users/dsm2017/Desktop/icons/flip_icon.png) 0 0 0 0 stretch stretch;
+	border-image: url(:/icons/resources/icons/flip_icon.png) 0 0 0 0 stretch stretch;
 }</string>
          </property>
          <property name="text">
@@ -363,7 +363,7 @@
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-	border-image: url(:/icons/C:/Users/dsm2017/Desktop/icons/text.png) 0 0 0 0 stretch stretch;
+	border-image: url(:/icons/resources/icons/text.png) 0 0 0 0 stretch stretch;
 }</string>
          </property>
          <property name="text">
@@ -381,7 +381,7 @@
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-	border-image: url(:/icons/C:/Users/dsm2017/Desktop/icons/measure_icon.png) 0 0 0 0 stretch stretch;
+	border-image: url(:/icons/resources/icons/measure_icon.png) 0 0 0 0 stretch stretch;
 }</string>
          </property>
          <property name="text">
@@ -417,7 +417,7 @@
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton {
-	border-image: url(:/icons/C:/Users/dsm2017/Desktop/icons/color-picker.png) 0 0 0 0 stretch stretch;
+	border-image: url(:/icons/resources/icons/color-picker.png) 0 0 0 0 stretch stretch;
 }</string>
        </property>
        <property name="text">
