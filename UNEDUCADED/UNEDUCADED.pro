@@ -4,7 +4,9 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui \
+            widgets \
+            gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -27,11 +29,13 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    itemobject.cpp
+    itemobject.cpp \
+    fileclass.cpp
 
 HEADERS += \
         mainwindow.h \
-    itemobject.h
+    itemobject.h \
+    fileclass.h
 
 FORMS += \
         mainwindow.ui
