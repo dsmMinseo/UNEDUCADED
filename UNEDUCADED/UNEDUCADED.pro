@@ -27,11 +27,17 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    itemobject.cpp
+    itemobject.cpp \
+    cadwindow.cpp \
+    customqgraphicsscene.cpp \
+    dialog.cpp
 
 HEADERS += \
         mainwindow.h \
-    itemobject.h
+    itemobject.h \
+    cadwindow.h \
+    customqgraphicsscene.h \
+    dialog.h
 
 FORMS += \
         mainwindow.ui

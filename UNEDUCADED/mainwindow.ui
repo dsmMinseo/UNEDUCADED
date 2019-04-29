@@ -70,22 +70,6 @@
      <attribute name="title">
       <string>Tab 1</string>
      </attribute>
-     <widget class="QOpenGLWidget" name="openGLWidget">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>1341</width>
-        <height>941</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-     </widget>
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
@@ -135,6 +119,16 @@
         </widget>
        </item>
       </layout>
+     </widget>
+     <widget class="CADWindow" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1211</width>
+        <height>911</height>
+       </rect>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
@@ -434,7 +428,7 @@
      <x>0</x>
      <y>0</y>
      <width>1920</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -605,6 +599,14 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CADWindow</class>
+   <extends>QWidget</extends>
+   <header>cadwindow.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
