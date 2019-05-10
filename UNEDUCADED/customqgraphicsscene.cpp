@@ -1,4 +1,4 @@
-#include "CustomQGraphicsScene.h"
+﻿#include "customqgraphicsscene.h"
 #include <QPainter>
 
 static const int GRID_STEP = 30;
@@ -10,7 +10,7 @@ inline qreal round(qreal val, int step) {
 }
 
 CustomQGraphicsScene::CustomQGraphicsScene(QObject *parent ) : QGraphicsScene(parent)
-{}
+{;}
 
 void CustomQGraphicsScene::drawBackground(QPainter *painter, const QRectF &rect)
 {
