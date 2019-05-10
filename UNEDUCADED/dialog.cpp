@@ -1,5 +1,5 @@
-#include "Dialog.h"
-#include "CustomQGraphicsScene.h"
+﻿#include "dialog.h"
+#include "customqgraphicsscene.h"
 #include <QVBoxLayout>
 #include <QGraphicsView>
 
