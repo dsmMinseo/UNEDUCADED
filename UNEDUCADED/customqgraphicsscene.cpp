@@ -25,7 +25,8 @@ void CustomQGraphicsScene::drawBackground(QPainter *painter, const QRectF &rect)
       y += step;
       painter->drawLine(rect.left(), y, rect.right(), y);
    }
-   // now draw vertical grid
+
+
    start = round(rect.left(), step);
    if (start > rect.left()) {
       start -= step;

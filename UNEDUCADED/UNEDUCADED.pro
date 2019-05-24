@@ -30,13 +30,15 @@ SOURCES += \
         mainwindow.cpp \
     cadwindow.cpp \
     customqgraphicsscene.cpp \
-    dialog.cpp
+    dialog.cpp \
+    paintwidget.cpp
 
 HEADERS += \
         mainwindow.h \
     cadwindow.h \
     customqgraphicsscene.h \
-    dialog.h
+    dialog.h \
+    paintwidget.h
 
 FORMS += \
         mainwindow.ui
