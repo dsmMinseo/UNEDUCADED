@@ -1,21 +1,55 @@
 ﻿#ifndef DIALOG_H
 #define DIALOG_H
-#include <QDialog>
 
-class CustomQGraphicsScene;
-class QGraphicsView;
-class QVBoxLayout;
+#include <QWidget>
+#include <QMouseEvent>
+#include <QPaintEvent>
+#include <QPixmap>
+#include <QLine>
+#include <QDialog>
 
 class Dialog : public QDialog
 {
-   Q_OBJECT
+    Q_OBJECT
 public:
-   Dialog(QWidget *parent = nullptr);
-   ~Dialog();
+    explicit Dialog(QWidget *parent = nullptr);
+    ~Dialog();
+
+signals:
+
+public slots:
+
+protected:
+    void mouseMoveEvent(QMouseEvent *);
+    void mousePressEvent(QMouseEvent *);
+    void mouseReleaseEvent(QMouseEvent *);
+    void paintEvent(QPaintEvent *);
 private:
-   CustomQGraphicsScene* scene;
-   QGraphicsView* view;
-   QVBoxLayout* layout;
+    QLine m_line;
+    QPixmap m_nPTargetPixmap;
+    bool m_nbMousePressed;
 };
 
-#endif // DIALOG_H
+#endif // PAINTWIDGET_H
+
+//#ifndef DIALOG_H
+//#define DIALOG_H
+//#include <QDialog>
+
+//class CustomQGraphicsScene;
+//class QGraphicsView;
+//class QVBoxLayout;
+
+//class Dialog : public QDialog
+//{
+//   Q_OBJECT
+//public:
+//   Dialog(QWidget *parent = nullptr);
+//   ~Dialog();
+//private:
+//   CustomQGraphicsScene* scene;
+//   QGraphicsView* view;
+//   QVBoxLayout* layout;
+//};
+
+//#endif // DIALOG_H

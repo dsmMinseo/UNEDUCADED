@@ -494,7 +494,7 @@
      <x>0</x>
      <y>0</y>
      <width>1920</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -526,6 +526,7 @@
     <addaction name="actionRight_View"/>
     <addaction name="actionLeft_View"/>
     <addaction name="actionTop_View"/>
+    <addaction name="actionAdd_Layer"/>
    </widget>
    <widget class="QMenu" name="menuTools">
     <property name="title">
@@ -648,6 +649,11 @@
   <action name="actionOption">
    <property name="text">
     <string>Option</string>
+   </property>
+  </action>
+  <action name="actionAdd_Layer">
+   <property name="text">
+    <string>Add Layer</string>
    </property>
   </action>
  </widget>

@@ -46,14 +46,11 @@ void MainWindow::on_scaleButton_clicked()
 ;
 }
 
-<<<<<<< HEAD
-=======
 void MainWindow::on_flipButton_clicked()
 {
 ;
 }
 
->>>>>>> 8703eae042bece4ddaa45f1a6fe847f4d19354f7
 void MainWindow::on_textButton_clicked()
 {
 ;

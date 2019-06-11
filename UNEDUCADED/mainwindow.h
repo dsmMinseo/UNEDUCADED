@@ -37,6 +37,7 @@ private Q_SLOTS:
 
     void on_actionFont_triggered();
 
+
 //    void on_widget_customContextMenuRequested(const QPoint &pos);
     
 private:
