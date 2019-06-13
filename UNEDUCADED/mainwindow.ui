@@ -214,9 +214,34 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>281</width>
+       <width>191</width>
        <height>961</height>
       </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="sizeIncrement">
+      <size>
+       <width>100</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor" stdset="0">
+      <cursorShape>OpenHandCursor</cursorShape>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
      </property>
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
@@ -225,14 +250,231 @@
       <bool>true</bool>
      </property>
      <property name="dragDropMode">
-      <enum>QAbstractItemView::DragOnly</enum>
+      <enum>QAbstractItemView::DragDrop</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>false</bool>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideMiddle</enum>
      </property>
      <property name="flow">
       <enum>QListView::LeftToRight</enum>
      </property>
-     <property name="itemAlignment">
-      <set>Qt::AlignJustify</set>
+     <property name="spacing">
+      <number>10</number>
      </property>
+     <property name="viewMode">
+      <enum>QListView::IconMode</enum>
+     </property>
+     <property name="itemAlignment">
+      <set>Qt::AlignCenter|Qt::AlignHCenter|Qt::AlignJustify|Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+     <item>
+      <property name="text">
+       <string>                            </string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>벽</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="textAlignment">
+       <set>AlignCenter</set>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/resources/icons/wall.png</normaloff>:/icons/resources/icons/wall.png</iconset>
+      </property>
+      <property name="flags">
+       <set>ItemIsDragEnabled|ItemIsEnabled</set>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>창문</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="textAlignment">
+       <set>AlignCenter</set>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/resources/icons/window.png</normaloff>:/icons/resources/icons/window.png</iconset>
+      </property>
+      <property name="flags">
+       <set>ItemIsDragEnabled|ItemIsEnabled</set>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>문</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="textAlignment">
+       <set>AlignCenter</set>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/resources/icons/door.png</normaloff>:/icons/resources/icons/door.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>계단</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="textAlignment">
+       <set>AlignCenter</set>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/resources/icons/stair.png</normaloff>:/icons/resources/icons/stair.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>------------------------</string>
+      </property>
+      <property name="flags">
+       <set>ItemIsEnabled</set>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>책상</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignJustify|AlignVCenter</set>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/resources/icons/office-desk.png</normaloff>:/icons/resources/icons/office-desk.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>의자</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/resources/icons/chair.png</normaloff>:/icons/resources/icons/chair.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>프린터</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/resources/icons/printer.png</normaloff>:/icons/resources/icons/printer.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>서랍장</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/resources/icons/drawer.png</normaloff>:/icons/resources/icons/drawer.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>------------------------</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>스토브</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/resources/icons/stove.png</normaloff>:/icons/resources/icons/stove.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>냉장고</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/resources/icons/fridge.png</normaloff>:/icons/resources/icons/fridge.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>소파</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/resources/icons/sofa.png</normaloff>:/icons/resources/icons/sofa.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>침대</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/resources/icons/bed.png</normaloff>:/icons/resources/icons/bed.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>------------------------</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>변기</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/resources/icons/toilet.png</normaloff>:/icons/resources/icons/toilet.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>욕조</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/resources/icons/bath.png</normaloff>:/icons/resources/icons/bath.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>세면대</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/resources/icons/sink.png</normaloff>:/icons/resources/icons/sink.png</iconset>
+      </property>
+     </item>
     </widget>
    </widget>
    <widget class="QWidget" name="layoutWidget">
@@ -494,7 +736,7 @@
      <x>0</x>
      <y>0</y>
      <width>1920</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -666,6 +908,8 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
