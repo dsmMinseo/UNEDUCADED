@@ -1,0 +1,10 @@
+debug/listitem.o
+debug/main.o
+debug/mainwindow.o
+debug/cadwindow.o
+debug/customqgraphicsscene.o
+debug/dialog.o
+debug/qrc_resources.o
+debug/moc_mainwindow.o
+debug/moc_cadwindow.o
+debug/moc_dialog.o

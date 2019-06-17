@@ -1,5 +1,6 @@
 ﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "fileclass.h"
 #include <iostream>
 #include <QFontDialog>
 #include <QFont>
@@ -71,3 +72,13 @@ void MainWindow::on_actionFont_triggered()
     MainWindow::setFont(QFontDialog::getFont(nullptr, MainWindow::font()));
 }
 
+void MainWindow::on_actionSave_triggered()
+{
+    QString fileName = QFileDialog::getSaveFileName(this,
+                       "Save File", "",
+                       "PDF File (*.pdf);;All Files(*)");
+
+    QPdfWriter pdfWriter(fileName);
+    pdfWriter.setPageSize(QPageSize(QPageSize::A4));
+
+}

@@ -14,8 +14,9 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMdiArea>
 #include <QtWidgets/QMenu>
@@ -27,6 +28,7 @@
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QTreeWidget>
 #include <QtWidgets/QWidget>
 #include "dialog.h"
 
@@ -55,7 +57,7 @@ public:
     QAction *actionHelp;
     QAction *actionOption;
     QWidget *centralWidget;
-    QListView *objectListView;
+    QTreeWidget *objectTreeWidget;
     QTabWidget *layerTab;
     QWidget *tab;
     QLabel *label;
@@ -66,9 +68,18 @@ public:
     QTextBrowser *textBrowser_2;
     QTextBrowser *textBrowser;
     QComboBox *comboBox;
+    QMdiArea *mdiArea_2;
+    Dialog *subwindow_2;
+    QWidget *layoutWidget_2;
+    QHBoxLayout *horizontalLayout_6;
+    QTextBrowser *textBrowser_3;
+    QTextBrowser *textBrowser_4;
+    QComboBox *comboBox_2;
+    QListWidget *itemListWidget_2;
     QWidget *tab_2;
     QOpenGLWidget *openGLWidget_2;
     QWidget *objectAdditionView;
+    QListWidget *itemListWidget;
     QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_4;
     QHBoxLayout *horizontalLayout;
@@ -145,15 +156,22 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(centralWidget->sizePolicy().hasHeightForWidth());
         centralWidget->setSizePolicy(sizePolicy);
-        objectListView = new QListView(centralWidget);
-        objectListView->setObjectName(QString::fromUtf8("objectListView"));
-        objectListView->setGeometry(QRect(3, 52, 275, 961));
+        objectTreeWidget = new QTreeWidget(centralWidget);
+        objectTreeWidget->setObjectName(QString::fromUtf8("objectTreeWidget"));
+        objectTreeWidget->setGeometry(QRect(3, 52, 275, 961));
         QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::MinimumExpanding);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(objectListView->sizePolicy().hasHeightForWidth());
-        objectListView->setSizePolicy(sizePolicy1);
-        objectListView->setMaximumSize(QSize(275, 970));
+        sizePolicy1.setHeightForWidth(objectTreeWidget->sizePolicy().hasHeightForWidth());
+        objectTreeWidget->setSizePolicy(sizePolicy1);
+        objectTreeWidget->setMaximumSize(QSize(275, 970));
+        QFont font;
+        font.setPointSize(12);
+        objectTreeWidget->setFont(font);
+        objectTreeWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        objectTreeWidget->setProperty("showDropIndicator", QVariant(false));
+        objectTreeWidget->setDragEnabled(false);
+        objectTreeWidget->setIconSize(QSize(10, 10));
         layerTab = new QTabWidget(centralWidget);
         layerTab->setObjectName(QString::fromUtf8("layerTab"));
         layerTab->setGeometry(QRect(279, 50, 1350, 971));
@@ -203,6 +221,65 @@ public:
 
         horizontalLayout_5->addWidget(comboBox);
 
+        mdiArea_2 = new QMdiArea(subwindow);
+        mdiArea_2->setObjectName(QString::fromUtf8("mdiArea_2"));
+        mdiArea_2->setGeometry(QRect(110, -140, 1341, 891));
+        mdiArea_2->setMaximumSize(QSize(16777215, 16777215));
+        subwindow_2 = new Dialog();
+        subwindow_2->setObjectName(QString::fromUtf8("subwindow_2"));
+        subwindow_2->setMinimumSize(QSize(1325, 820));
+        subwindow_2->setMaximumSize(QSize(1325, 820));
+        layoutWidget_2 = new QWidget(subwindow_2);
+        layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
+        layoutWidget_2->setGeometry(QRect(830, 858, 501, 89));
+        horizontalLayout_6 = new QHBoxLayout(layoutWidget_2);
+        horizontalLayout_6->setSpacing(6);
+        horizontalLayout_6->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        textBrowser_3 = new QTextBrowser(layoutWidget_2);
+        textBrowser_3->setObjectName(QString::fromUtf8("textBrowser_3"));
+
+        horizontalLayout_6->addWidget(textBrowser_3);
+
+        textBrowser_4 = new QTextBrowser(layoutWidget_2);
+        textBrowser_4->setObjectName(QString::fromUtf8("textBrowser_4"));
+
+        horizontalLayout_6->addWidget(textBrowser_4);
+
+        comboBox_2 = new QComboBox(layoutWidget_2);
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
+
+        horizontalLayout_6->addWidget(comboBox_2);
+
+        mdiArea_2->addSubWindow(subwindow_2);
+        itemListWidget_2 = new QListWidget(subwindow);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/icons/resources/icons/door.png"), QSize(), QIcon::Normal, QIcon::Off);
+        QFont font1;
+        font1.setPointSize(15);
+        QListWidgetItem *__qlistwidgetitem = new QListWidgetItem(itemListWidget_2);
+        __qlistwidgetitem->setTextAlignment(Qt::AlignCenter);
+        __qlistwidgetitem->setFont(font1);
+        __qlistwidgetitem->setIcon(icon);
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8("resources/icons/window.png"), QSize(), QIcon::Normal, QIcon::Off);
+        QListWidgetItem *__qlistwidgetitem1 = new QListWidgetItem(itemListWidget_2);
+        __qlistwidgetitem1->setTextAlignment(Qt::AlignCenter);
+        __qlistwidgetitem1->setFont(font1);
+        __qlistwidgetitem1->setIcon(icon1);
+        itemListWidget_2->setObjectName(QString::fromUtf8("itemListWidget_2"));
+        itemListWidget_2->setGeometry(QRect(1464, -161, 281, 961));
+        itemListWidget_2->setFont(font1);
+        itemListWidget_2->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        itemListWidget_2->setDragEnabled(true);
+        itemListWidget_2->setDragDropMode(QAbstractItemView::DragDrop);
+        itemListWidget_2->setIconSize(QSize(50, 50));
+        itemListWidget_2->setFlow(QListView::LeftToRight);
+        itemListWidget_2->setSpacing(10);
+        itemListWidget_2->setViewMode(QListView::IconMode);
+        itemListWidget_2->setItemAlignment(Qt::AlignJustify);
         mdiArea->addSubWindow(subwindow);
         layerTab->addTab(tab, QString());
         tab_2 = new QWidget();
@@ -220,9 +297,34 @@ public:
         sizePolicy3.setHeightForWidth(objectAdditionView->sizePolicy().hasHeightForWidth());
         objectAdditionView->setSizePolicy(sizePolicy3);
         objectAdditionView->setMaximumSize(QSize(300, 1020));
+        itemListWidget = new QListWidget(objectAdditionView);
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/icons/resources/icons/wall.png"), QSize(), QIcon::Normal, QIcon::Off);
+        QListWidgetItem *__qlistwidgetitem2 = new QListWidgetItem(itemListWidget);
+        __qlistwidgetitem2->setTextAlignment(Qt::AlignCenter);
+        __qlistwidgetitem2->setFont(font1);
+        __qlistwidgetitem2->setIcon(icon2);
+        QListWidgetItem *__qlistwidgetitem3 = new QListWidgetItem(itemListWidget);
+        __qlistwidgetitem3->setTextAlignment(Qt::AlignCenter);
+        __qlistwidgetitem3->setFont(font1);
+        __qlistwidgetitem3->setIcon(icon1);
+        QListWidgetItem *__qlistwidgetitem4 = new QListWidgetItem(itemListWidget);
+        __qlistwidgetitem4->setTextAlignment(Qt::AlignCenter);
+        __qlistwidgetitem4->setFont(font1);
+        __qlistwidgetitem4->setIcon(icon);
+        itemListWidget->setObjectName(QString::fromUtf8("itemListWidget"));
+        itemListWidget->setGeometry(QRect(0, 0, 281, 961));
+        itemListWidget->setFont(font1);
+        itemListWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        itemListWidget->setDragEnabled(true);
+        itemListWidget->setDragDropMode(QAbstractItemView::DragDrop);
+        itemListWidget->setIconSize(QSize(50, 50));
+        itemListWidget->setSpacing(15);
+        itemListWidget->setViewMode(QListView::IconMode);
+        itemListWidget->setItemAlignment(Qt::AlignHCenter);
         layoutWidget1 = new QWidget(centralWidget);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(4, 10, 533, 34));
+        layoutWidget1->setGeometry(QRect(4, 10, 533, 42));
         horizontalLayout_4 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_4->setSpacing(15);
         horizontalLayout_4->setContentsMargins(11, 11, 11, 11);
@@ -343,7 +445,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1920, 26));
+        menuBar->setGeometry(QRect(0, 0, 1920, 20));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuedit = new QMenu(menuBar);
@@ -416,13 +518,40 @@ public:
         actionFont->setText(QApplication::translate("MainWindow", "Font", nullptr));
         actionHelp->setText(QApplication::translate("MainWindow", "Help", nullptr));
         actionOption->setText(QApplication::translate("MainWindow", "Option", nullptr));
+        QTreeWidgetItem *___qtreewidgetitem = objectTreeWidget->headerItem();
+        ___qtreewidgetitem->setText(1, QApplication::translate("MainWindow", "Value", nullptr));
+        ___qtreewidgetitem->setText(0, QApplication::translate("MainWindow", "Property", nullptr));
         label->setText(QString());
         subwindow->setWindowTitle(QApplication::translate("MainWindow", "Subwindow", nullptr));
         comboBox->setItemText(0, QApplication::translate("MainWindow", "m", nullptr));
         comboBox->setItemText(1, QApplication::translate("MainWindow", "cm", nullptr));
 
+        subwindow_2->setWindowTitle(QApplication::translate("MainWindow", "Subwindow", nullptr));
+        comboBox_2->setItemText(0, QApplication::translate("MainWindow", "m", nullptr));
+        comboBox_2->setItemText(1, QApplication::translate("MainWindow", "cm", nullptr));
+
+
+        const bool __sortingEnabled = itemListWidget_2->isSortingEnabled();
+        itemListWidget_2->setSortingEnabled(false);
+        QListWidgetItem *___qlistwidgetitem = itemListWidget_2->item(0);
+        ___qlistwidgetitem->setText(QApplication::translate("MainWindow", "bath", nullptr));
+        QListWidgetItem *___qlistwidgetitem1 = itemListWidget_2->item(1);
+        ___qlistwidgetitem1->setText(QApplication::translate("MainWindow", "window", nullptr));
+        itemListWidget_2->setSortingEnabled(__sortingEnabled);
+
         layerTab->setTabText(layerTab->indexOf(tab), QApplication::translate("MainWindow", "Tab 1", nullptr));
         layerTab->setTabText(layerTab->indexOf(tab_2), QApplication::translate("MainWindow", "Tab 2", nullptr));
+
+        const bool __sortingEnabled1 = itemListWidget->isSortingEnabled();
+        itemListWidget->setSortingEnabled(false);
+        QListWidgetItem *___qlistwidgetitem2 = itemListWidget->item(0);
+        ___qlistwidgetitem2->setText(QApplication::translate("MainWindow", "wall", nullptr));
+        QListWidgetItem *___qlistwidgetitem3 = itemListWidget->item(1);
+        ___qlistwidgetitem3->setText(QApplication::translate("MainWindow", "window", nullptr));
+        QListWidgetItem *___qlistwidgetitem4 = itemListWidget->item(2);
+        ___qlistwidgetitem4->setText(QApplication::translate("MainWindow", "door", nullptr));
+        itemListWidget->setSortingEnabled(__sortingEnabled1);
+
         undoButton->setText(QString());
         redoButton->setText(QString());
         moveButton->setText(QString());

@@ -6,6 +6,9 @@ class CustomQGraphicsScene;
 class QGraphicsView;
 class QVBoxLayout;
 
+namespace Ui {
+}
+
 class Dialog : public QDialog
 {
    Q_OBJECT

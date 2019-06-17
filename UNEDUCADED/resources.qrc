@@ -1,31 +1,34 @@
 <RCC>
     <qresource prefix="/icons">
-        <file>resources/icons/bath.png</file>
-        <file>resources/icons/bed.png</file>
-        <file>resources/icons/chair.png</file>
         <file>resources/icons/color-picker.png</file>
-        <file>resources/icons/door.png</file>
         <file>resources/icons/down.png</file>
-        <file>resources/icons/drawer.png</file>
         <file>resources/icons/flip_icon.png</file>
-        <file>resources/icons/fridge.png</file>
         <file>resources/icons/measure_icon.png</file>
         <file>resources/icons/move.png</file>
-        <file>resources/icons/office-desk.png</file>
-        <file>resources/icons/Pillar.png</file>
-        <file>resources/icons/printer.png</file>
         <file>resources/icons/redo.png</file>
         <file>resources/icons/resize.png</file>
         <file>resources/icons/rotate.png</file>
-        <file>resources/icons/sink.png</file>
-        <file>resources/icons/sofa.png</file>
-        <file>resources/icons/stair.png</file>
-        <file>resources/icons/stove.png</file>
         <file>resources/icons/text.png</file>
-        <file>resources/icons/toilet.png</file>
         <file>resources/icons/triangle.png</file>
         <file>resources/icons/undo.png</file>
+        <file>resources/icons/bed.png</file>
+        <file>resources/icons/chair.png</file>
+        <file>resources/icons/door.png</file>
+        <file>resources/icons/stair.png</file>
+        <file>resources/icons/toilet.png</file>
         <file>resources/icons/wall.png</file>
         <file>resources/icons/window.png</file>
+        <file>resources/icons/desk.png</file>
+        <file>resources/icons/drawer.png</file>
+        <file>resources/icons/fridge.png</file>
+        <file>resources/icons/pillar.png</file>
+        <file>resources/icons/printer.png</file>
+        <file>resources/icons/sink.png</file>
+        <file>resources/icons/sofa.png</file>
+        <file>resources/icons/stove.png</file>
+        <file>resources/icons/bath.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>RightTabItem.qml</file>
     </qresource>
 </RCC>
