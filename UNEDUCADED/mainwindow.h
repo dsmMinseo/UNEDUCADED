@@ -39,6 +39,9 @@ private Q_SLOTS:
 
     void on_actionSave_triggered();
 
+
+//    void on_widget_customContextMenuRequested(const QPoint &pos);
+
 private:
     Ui::MainWindow *ui;
 };
